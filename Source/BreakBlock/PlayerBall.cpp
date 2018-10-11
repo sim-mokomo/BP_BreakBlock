@@ -27,10 +27,6 @@ void APlayerBall::SetMoveDirection(FVector newMoveDirection)
 void APlayerBall::OnBallHitEvent(UPrimitiveComponent * HitComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)
 {
 	this->moveDirection = UKismetMathLibrary::MirrorVectorByNormal(this->moveDirection, Hit.Normal);
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, TEXT("Hit Any Thing"));
-	}
 }
 
 // Called when the game starts or when spawned

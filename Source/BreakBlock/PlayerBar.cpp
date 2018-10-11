@@ -21,7 +21,7 @@ APlayerBar::APlayerBar()
 void APlayerBar::MoveHorizontal(float AxisValue)
 {
 
-	FVector deltaLoc = AxisValue * GetActorRightVector() * GetWorld()->GetTimeSeconds() * this->moveSpeed;
+	FVector deltaLoc = AxisValue * GetActorRightVector() * GetWorld()->GetDeltaSeconds() * this->moveSpeed;
 	AddActorWorldOffset(deltaLoc, true);
 
 }
