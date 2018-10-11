@@ -14,6 +14,7 @@ class BREAKBLOCK_API ABlock : public AActor
 		UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* blockMesh;
 
+	/* 破壊時パーティクルです */
 	UPROPERTY(EditAnywhere)
 		class UParticleSystem* destroyParticle;
 
@@ -21,6 +22,7 @@ public:
 	// Sets default values for this actor's properties
 	ABlock();
 
+	/* 何かしらにヒットしたときに実行されるイベントです。ボールに当たった時に破壊されるために使用しています。 */
 	UFUNCTION()
 	void OnBlockHitEvent(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 

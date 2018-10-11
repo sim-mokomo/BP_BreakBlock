@@ -14,9 +14,11 @@ class BREAKBLOCK_API APlayerBall : public AActor
 		UPROPERTY(EditAnywhere)
 		class UStaticMeshComponent* ballMesh;
 	
-	UPROPERTY(VisibleAnywhere)
+	/* 移動の方向を表しています */
+	UPROPERTY()
 	FVector moveDirection;
 
+	/* 移動速度を表しています */
 	UPROPERTY(EditAnywhere)
 		float moveSpeed = 500.0f;
 
@@ -24,9 +26,11 @@ public:
 	// Sets default values for this actor's properties
 	APlayerBall();
 
+	/* 移動の方向を newMoveDirection方向に 書き換えます */
 	UFUNCTION()
 		void SetMoveDirection(FVector newMoveDirection);
 
+	/* 何かしらにヒットしたときに発生するイベントです。反射の実装に使用されています */
 	UFUNCTION()
 		void OnBallHitEvent(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 

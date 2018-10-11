@@ -18,9 +18,11 @@ public:
 	// Sets default values for this pawn's properties
 	APlayerBar();
 
+	/* 軸入力に紐づけさせる命令です。移動に使用します */
 	UFUNCTION()
 	void MoveHorizontal(float AxisValue);
 
+	/* 移動速度を表します */
 	UPROPERTY(EditAnywhere)
 		float moveSpeed;
 
