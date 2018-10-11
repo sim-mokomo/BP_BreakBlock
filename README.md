@@ -1,2 +1,8 @@
-# BP_BreakBlock
-Blueprintで作成したブロック崩し
+# branch説明
+
+## Blueprints
+- Blueprintで作成したブロック崩しがあります。(動画用なのでまだ作成してません)
+## cpp
+- C++ Only で作成されたブロック崩しです。
+  UEC++の勉強のために C++ Only で作成していますが用途に応じて使い分けたほうがいいと思います。
+
